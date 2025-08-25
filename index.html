@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammad Zaid Shaikh • Portfolio</title>
+  <meta name="description" content="Business & Data Analyst • AI Evaluation Specialist • Fast, responsive portfolio" />
+  <meta property="og:title" content="Mohammad Zaid Shaikh • Portfolio" />
+  <meta property="og:description" content="Business & Data Analyst • AI Evaluation Specialist • Projects, skills & contact" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230ea5e9'/%3E%3Ctext x='50' y='62' font-size='60' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'%3EZ%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg:#0b1220;          /* page bg */
+      --card:#0f172a;        /* card bg */
+      --muted:#94a3b8;       /* muted text */
+      --text:#e5e7eb;        /* main text */
+      --brand:#0ea5e9;       /* accent */
+      --brand-2:#22d3ee;     /* accent 2 */
+      --radius:18px;
+      --shadow:0 10px 30px rgba(2, 6, 23, .35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      background:radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,.06), transparent 60%),
+                 radial-gradient(900px 600px at 10% -10%, rgba(14,165,233,.10), transparent 60%),
+                 var(--bg);
+      color:var(--text);
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(180%) blur(6px);
+      background:linear-gradient(to bottom, rgba(11,18,32,.85), rgba(11,18,32,.55));
+      border-bottom:1px solid rgba(148,163,184,.12);
+      z-index:10;
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .brand .logo{width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow:var(--shadow); display:grid; place-items:center;}
+    .brand .logo span{font-weight:800; color:#001927}
+    .links a{padding:10px 12px; border-radius:12px}
+    .links a:hover{background:#0f172a}.hero{display:grid; grid-template-columns:1.2fr .8fr; gap:28px; padding:56px 0 30px}
+.hero h1{font-size:clamp(28px, 4vw, 44px); line-height:1.15; margin:0 0 12px}
+.hero p{color:var(--muted); margin:0 0 18px}
+.cta{display:flex; gap:12px; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; gap:10px; border:none; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#04242e; padding:12px 18px; border-radius:14px; font-weight:700; cursor:pointer; box-shadow:var(--shadow)}
+.btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(148,163,184,.25)}
+
+.card{background:linear-gradient(180deg, rgba(15,23,42,.8), rgba(15,23,42,.6)); border:1px solid rgba(148,163,184,.18); border-radius:var(--radius); box-shadow:var(--shadow)}
+.grid{display:grid; gap:18px}
+
+/* Projects */
+.projects{padding:20px 0 40px}
+.projects h2, .skills h2, .about h2, .contact h2{font-size:clamp(22px, 3vw, 30px)}
+.pgrid{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+.project{padding:16px}
+.thumb{aspect-ratio:16/9; border-radius:12px; background:#0b2030; display:grid; place-items:center; overflow:hidden; border:1px solid rgba(148,163,184,.12)}
+.thumb svg{width:60%; opacity:.9}
+.project h3{margin:12px 0 6px; font-size:18px}
+.tags{display:flex; flex-wrap:wrap; gap:8px}
+.tag{font-size:12px; padding:6px 10px; background:#0b1a2a; border:1px solid rgba(148,163,184,.16); border-radius:999px; color:var(--muted)}
+
+/* Skills */
+.skills{padding:14px 0 40px}
+.chips{display:flex; flex-wrap:wrap; gap:10px}
+.chip{padding:10px 12px; border-radius:12px; background:#0d1b2b; border:1px solid rgba(148,163,184,.18)}
+
+/* About */
+.about{padding:14px 0 40px}
+.about .inner{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
+.about .me{padding:18px}
+.kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+.kpis .kpi{padding:14px; text-align:center}
+.kpi h4{margin:0; font-size:22px; color:var(--brand-2)}
+.kpi p{margin:4px 0 0; color:var(--muted)}
+
+/* Contact */
+.contact{padding:14px 0 60px}
+.contact .inner{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+.contact a.btn{justify-content:center}
+
+footer{border-top:1px solid rgba(148,163,184,.12); color:var(--muted); padding:26px 0 40px}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero{grid-template-columns:1fr; padding-top:24px}
+  .about .inner, .contact .inner{grid-template-columns:1fr}
+}
+
+/* Motion safety */
+@media (prefers-reduced-motion: reduce){
+  *{scroll-behavior:auto; animation:none !important; transition:none !important}
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <div class="logo"><span>Z</span></div>
+          <span>Mohammad Zaid Shaikh</span>
+        </div>
+        <div class="links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Business & Data Analyst • AI Evaluation Specialist</h1>
+        <p>Power BI dashboards, SQL/Python analytics, and AI evaluation across English/Hindi. I turn messy data into clear decisions and fast visual stories.</p>
+        <div class="cta">
+          <a class="btn" href="#projects" aria-label="View projects">View Projects ▸</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="card" style="padding:16px; display:grid; place-items:center">
+        <!-- Decorative / illustrative SVG (fast, no images) -->
+        <svg viewBox="0 0 640 360" width="100%" height="auto" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#22d3ee" stop-opacity="0.9" />
+              <stop offset="1" stop-color="#0ea5e9" stop-opacity="0.9" />
+            </linearGradient>
+            <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+              <feGaussianBlur stdDeviation="20" />
+            </filter>
+          </defs>
+          <rect x="0" y="0" width="640" height="360" rx="14" fill="#081425" />
+          <circle cx="520" cy="90" r="70" fill="url(#g1)" filter="url(#blur)" opacity="0.7" />
+          <circle cx="100" cy="260" r="80" fill="url(#g1)" filter="url(#blur)" opacity="0.6" />
+          <g fill="none" stroke="#1f3b57" opacity="0.8">
+            <path d="M40 300 C 180 220, 320 340, 600 200" />
+            <path d="M40 260 C 220 180, 340 300, 600 160" />
+            <path d="M40 220 C 240 140, 360 260, 600 120" />
+          </g>
+          <g stroke="url(#g1)" stroke-width="3" fill="none">
+            <path d="M60 260 C 220 180, 340 300, 580 160" />
+          </g>
+          <g fill="#cbd5e1">
+            <text x="40" y="60" font-size="20">KPIs</text>
+            <text x="40" y="88" font-size="14" fill="#94a3b8">Sales • CTR • Uptime</text>
+          </g>
+        </svg>
+      </div>
+    </section><section id="projects" class="projects">
+  <h2>Featured Projects</h2>
+  <p class="muted">Short, outcome‑focused summaries. Replace with your work.</p>
+  <div class="grid pgrid">
+    <article class="card project">
+      <div class="thumb">
+        <svg viewBox="0 0 120 68" aria-hidden="true"><rect x="8" y="10" width="104" height="48" rx="6" fill="#0a1b2a"/><path d="M18 48 L36 28 L52 40 L68 26 L96 48" stroke="#22d3ee" stroke-width="3" fill="none"/></svg>
+      </div>
+      <h3>Retail Sales Dashboard (Power BI)</h3>
+      <p>Interactive KPI cards, YoY growth, regional clustering; reduced weekly reporting time by 60%.</p>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">ETL</span></div>
+    </article>
+    <article class="card project">
+      <div class="thumb">
+        <svg viewBox="0 0 120 68" aria-hidden="true"><rect x="8" y="10" width="104" height="48" rx="6" fill="#0a1b2a"/><g stroke="#22d3ee" stroke-width="3" fill="none"><circle cx="40" cy="34" r="14"/><path d="M58 22 h30 M58 34 h30 M58 46 h22"/></g></svg>
+      </div>
+      <h3>E‑commerce Funnel Analysis</h3>
+      <p>Identified 3 conversion blockers; +12% checkout completion after A/B test.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">A/B</span></div>
+    </article>
+    <article class="card project">
+      <div class="thumb">
+        <svg viewBox="0 0 120 68" aria-hidden="true"><rect x="8" y="10" width="104" height="48" rx="6" fill="#0a1b2a"/><g stroke="#22d3ee" stroke-width="3" fill="none"><path d="M18 48 L40 36 L62 42 L84 22 L100 26"/></g></svg>
+      </div>
+      <h3>AI Evaluation – Hindi/English</h3>
+      <p>900+ hours of multi‑turn prompt evaluation; improved response quality via rubric‑driven reviews.</p>
+      <div class="tags"><span class="tag">LLM Eval</span><span class="tag">Prompting</span><span class="tag">QA</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="chips">
+    <span class="chip">Power BI • DAX</span>
+    <span class="chip">SQL • ETL • Excel</span>
+    <span class="chip">Python (Pandas/Numpy)</span>
+    <span class="chip">Tableau</span>
+    <span class="chip">Jira • Notion • Git</span>
+    <span class="chip">Hindi • English</span>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About</h2>
+  <div class="inner">
+    <div class="card me">
+      <p><strong>Hi, I'm Zaid.</strong> I analyze data, build crisp dashboards, and evaluate AI systems. I like fast, accessible, and maintainable solutions.</p>
+      <ul>
+        <li>Business Analyst • Data Analyst • AI Evaluation Specialist</li>
+        <li>Freelance + remote‑friendly • India (IST)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="kpis">
+        <div class="kpi"><h4>3</h4><p>Power BI dashboards</p></div>
+        <div class="kpi"><h4>1k+</h4><p>Annotations & reviews</p></div>
+        <div class="kpi"><h4>900h+</h4><p>LLM eval work</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <div class="inner">
+    <div class="card" style="padding:16px">
+      <p>📧 <a href="mailto:izaid37733@gmail.com">izaid37733@gmail.com</a><br>
+         🔗 <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+      <p class="muted">Open to roles: Business Analyst, Data Analyst, AI Evaluation.</p>
+    </div>
+    <div>
+      <a class="btn" href="#" onclick="alert('Replace this with your resume link!'); return false;">Download Résumé</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="y"></span> Mohammad Zaid Shaikh — Fast, responsive & accessible.
+  </div>
+</footer>
+
+  </main>  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script></body>
+  </html>
