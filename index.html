@@ -261,4 +261,160 @@ footer{border-top:1px solid rgba(148,163,184,.12); color:var(--muted); padding:2
   </main>  <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script></body>
+</html>}
+
+/* Motion safety */
+@media (prefers-reduced-motion: reduce){
+  *{scroll-behavior:auto; animation:none !important; transition:none !important}
+}
+
+  </style>
+</head>
+<body>
+  <!-- Water background sits behind all content -->
+  <div class="water-bg" aria-hidden="true">
+    <div class="wave w1"></div>
+    <div class="wave w2"></div>
+    <div class="wave w3"></div>
+  </div>  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <div class="logo"><span>Z</span></div>
+          <span>Mohammad Zaid Shaikh</span>
+        </div>
+        <div class="links">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Business & Data Analyst • AI Evaluation Specialist</h1>
+        <p>Power BI dashboards, SQL/Python analytics, and AI evaluation across English/Hindi. I turn messy data into clear decisions and fast visual stories.</p>
+        <div class="cta">
+          <a class="btn" href="#projects" aria-label="View projects">View Projects ▸</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="card" style="padding:16px; display:grid; place-items:center">
+        <!-- Decorative / illustrative SVG (fast, no images) -->
+        <svg viewBox="0 0 640 360" width="100%" height="auto" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#22d3ee" stop-opacity="0.9" />
+              <stop offset="1" stop-color="#0ea5e9" stop-opacity="0.9" />
+            </linearGradient>
+            <filter id="blur" x="-10%" y="-10%" width="120%" height="120%">
+              <feGaussianBlur stdDeviation="20" />
+            </filter>
+          </defs>
+          <rect x="0" y="0" width="640" height="360" rx="14" fill="#081425" />
+          <circle cx="520" cy="90" r="70" fill="url(#g1)" filter="url(#blur)" opacity="0.7" />
+          <circle cx="100" cy="260" r="80" fill="url(#g1)" filter="url(#blur)" opacity="0.6" />
+          <g fill="none" stroke="#1f3b57" opacity="0.8">
+            <path d="M40 300 C 180 220, 320 340, 600 200" />
+            <path d="M40 260 C 220 180, 340 300, 600 160" />
+            <path d="M40 220 C 240 140, 360 260, 600 120" />
+          </g>
+          <g stroke="url(#g1)" stroke-width="3" fill="none">
+            <path d="M60 260 C 220 180, 340 300, 580 160" />
+          </g>
+          <g fill="#cbd5e1">
+            <text x="40" y="60" font-size="20">KPIs</text>
+            <text x="40" y="88" font-size="14" fill="#94a3b8">Sales • CTR • Uptime</text>
+          </g>
+        </svg>
+      </div>
+    </section><section id="projects" class="projects">
+  <h2>Featured Projects</h2>
+  <p class="muted">Short, outcome‑focused summaries. Replace with your work.</p>
+  <div class="grid pgrid">
+    <article class="card project">
+      <div class="thumb">
+        <svg viewBox="0 0 120 68" aria-hidden="true"><rect x="8" y="10" width="104" height="48" rx="6" fill="#0a1b2a"/><path d="M18 48 L36 28 L52 40 L68 26 L96 48" stroke="#22d3ee" stroke-width="3" fill="none"/></svg>
+      </div>
+      <h3>Retail Sales Dashboard (Power BI)</h3>
+      <p>Interactive KPI cards, YoY growth, regional clustering; reduced weekly reporting time by 60%.</p>
+      <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">ETL</span></div>
+    </article>
+    <article class="card project">
+      <div class="thumb">
+        <svg viewBox="0 0 120 68" aria-hidden="true"><rect x="8" y="10" width="104" height="48" rx="6" fill="#0a1b2a"/><g stroke="#22d3ee" stroke-width="3" fill="none"><circle cx="40" cy="34" r="14"/><path d="M58 22 h30 M58 34 h30 M58 46 h22"/></g></svg>
+      </div>
+      <h3>E‑commerce Funnel Analysis</h3>
+      <p>Identified 3 conversion blockers; +12% checkout completion after A/B test.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">A/B</span></div>
+    </article>
+    <article class="card project">
+      <div class="thumb">
+        <svg viewBox="0 0 120 68" aria-hidden="true"><rect x="8" y="10" width="104" height="48" rx="6" fill="#0a1b2a"/><g stroke="#22d3ee" stroke-width="3" fill="none"><path d="M18 48 L40 36 L62 42 L84 22 L100 26"/></g></svg>
+      </div>
+      <h3>AI Evaluation – Hindi/English</h3>
+      <p>900+ hours of multi‑turn prompt evaluation; improved response quality via rubric‑driven reviews.</p>
+      <div class="tags"><span class="tag">LLM Eval</span><span class="tag">Prompting</span><span class="tag">QA</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="chips">
+    <span class="chip">Power BI • DAX</span>
+    <span class="chip">SQL • ETL • Excel</span>
+    <span class="chip">Python (Pandas/Numpy)</span>
+    <span class="chip">Tableau</span>
+    <span class="chip">Jira • Notion • Git</span>
+    <span class="chip">Hindi • English</span>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About</h2>
+  <div class="inner">
+    <div class="card me">
+      <p><strong>Hi, I'm Zaid.</strong> I analyze data, build crisp dashboards, and evaluate AI systems. I like fast, accessible, and maintainable solutions.</p>
+      <ul>
+        <li>Business Analyst • Data Analyst • AI Evaluation Specialist</li>
+        <li>Freelance + remote‑friendly • India (IST)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="kpis">
+        <div class="kpi"><h4>3</h4><p>Power BI dashboards</p></div>
+        <div class="kpi"><h4>1k+</h4><p>Annotations & reviews</p></div>
+        <div class="kpi"><h4>900h+</h4><p>LLM eval work</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <div class="inner">
+    <div class="card" style="padding:16px">
+      <p>📧 <a href="mailto:izaid37733@gmail.com">izaid37733@gmail.com</a><br>
+         🔗 <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+      <p class="muted">Open to roles: Business Analyst, Data Analyst, AI Evaluation.</p>
+    </div>
+    <div>
+      <a class="btn" href="#" onclick="alert('Replace this with your resume link!'); return false;">Download Résumé</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="y"></span> Mohammad Zaid Shaikh — Fast, responsive & accessible.
+  </div>
+</footer>
+
+  </main>  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script></body>
 </html>
